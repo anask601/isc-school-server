@@ -30,6 +30,6 @@ const UniversitySchema = new Schema({
     type: String,
   },
 });
-const Univ = mongoose.model("Universitie", UniversitySchema);
+const Univ = mongoose.model("univeristies", UniversitySchema);
 
 module.exports = Univ;

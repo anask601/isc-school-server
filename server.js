@@ -2,7 +2,9 @@
 
 const Hapi = require("@hapi/hapi");
 const mongoose = require("mongoose");
-const universityRoute = require("./src/routes/University.route");
+const universityRoute = require("./src/routes/university-data/University.route");
+const coursesRoute = require("./src/routes/courses/Courses.route");
+const countryRoute = require("./src/routes/country/Country.route");
 
 mongoose
   .connect("mongodb://localhost:27017/ISC")
@@ -24,13 +26,12 @@ const init = async () => {
     },
   });
 
-  server.route({
-    method: "GET",
-    path: "/",
-    handler: (req, res) => "Hello, world!",
-  });
+  // server.route({
+  //   method: "GET",
+  //   path: "/",
+  //   handler: (req, res) => "Hello, world!",
+  // });
 
-  console.log(universityRoute);
   server.route(universityRoute);
   await server.start();
   console.log("Server running on %s", server.info.uri);
