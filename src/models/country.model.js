@@ -13,4 +13,4 @@ const countrySchema = new Schema({
     required: true,
   },
 });
-module.exports = mongoose.model("Country", courseSchema);
+module.exports = mongoose.model("Country", countrySchema);
