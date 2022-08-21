@@ -4,8 +4,9 @@ const mongoose = require("mongoose");
 const universityRoute = require("./src/routes/university-data/University.route");
 // const coursesRoute = require("./src/routes/courses/Courses.route");
 // const countryRoute = require("./src/routes/country/Country.route");
-const database = require("./src/FT-27/mongodb/index.js");
 // const collections = require("./src/FT-27/mongodb/collections/collections");
+const database = require("./src/FT-27/mongodb/index.js");
+const sequelize = require("./src/FT-40/postgres/index")
 const {
   userRoute,
   createUserRoute,
@@ -52,3 +53,4 @@ process.on("unhandledRejection", (err) => {
 });
 
 init();
+()=>{}
